@@ -11,6 +11,8 @@ export default function CadastroUsuario(){
     });
 
     const handleChange = (evento:React.ChangeEvent<HTMLInputElement>) =>{
+        const {name, value} = evento.target;
+        setUsuario({...usuario,[name]:value})
 
     }
 
