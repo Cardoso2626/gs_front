@@ -17,7 +17,29 @@ export default function CadastroUsuario(){
     }
 
     const handleSubmit = async(evento:React.FormEvent<HTMLFormElement>) =>{
+        evento.preventDefault();
+        try {
+            const response = await fetch("http://localhost:8080/usuarios", {
+                method: "POST",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(usuario)
+            })
 
+            if(response.ok){
+                alert("Usuário cadastrado com sucesso")
+                setUsuario({
+                    nome:"",
+                    idade:0,
+                    telefone:"",
+                    cpf:""
+                })
+                
+            }
+        } catch (error) {
+            
+        }
     }
 
     return(
