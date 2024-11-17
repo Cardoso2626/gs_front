@@ -1,5 +1,5 @@
 import { TipoUsuario } from "@/types/types";
-import { useState } from "react"
+import React, { useState } from "react"
 
 export default function CadastroUsuario(){
 
@@ -10,6 +10,10 @@ export default function CadastroUsuario(){
         cpf:""
     });
 
+    const handleChange = (evento:React.ChangeEvent<HTMLInputElement>) =>{
+
+    }
+
     return(
         <div>
             <form>
@@ -17,19 +21,19 @@ export default function CadastroUsuario(){
                 <h3>Faça seu cadastro</h3>
                 <div>
                     <label id="idNome"></label>
-                    <input type="text" name="nome" id="idNome" placeholder="Nome do usuário" required />
+                    <input type="text" name="nome" id="idNome" placeholder="Nome do usuário" value={usuario.nome} onChange={(evento)=>handleChange(evento)} required />
                 </div>
                 <div>
                     <label id="idIdade"></label>
-                    <input type="number" name="idade" id="idIdade" placeholder="Idade" required min={0}/>
+                    <input type="number" name="idade" id="idIdade" placeholder="Idade" value={usuario.idade} onChange={(evento)=>handleChange(evento)} required min={0}/>
                 </div>
                 <div>
                     <label id="idTelefone"></label>
-                    <input type="text" name="telefone" id="idTelefone" placeholder="Telefone" />
+                    <input type="text" name="telefone" id="idTelefone" placeholder="Telefone" value={usuario.telefone} onChange={(evento)=>handleChange(evento)} required/>
                 </div>
                 <div>
                     <label id="idCpf" ></label>
-                    <input type="text" name="cpf" id="idCpf" placeholder="Cpf" required/>
+                    <input type="text" name="cpf" id="idCpf" placeholder="Cpf" value={usuario.cpf} onChange={(evento)=>handleChange(evento)} required/>
                 </div>
                 <div>
                     <button type="submit">Cadastre-se</button>
