@@ -8,12 +8,6 @@ export default function Rodape(){
                     <p>Telefone: (11) 94743-1188</p>
                 </div>
                 <div className="flex-1 min-w-[300px] m-2">
-                    <h3 className="mb-2">Redes Sociais</h3>
-                    <a href="https://www.facebook.com" className="block mb-1 hover:underline">Facebook</a>
-                    <a href="https://www.twitter.com" className="block mb-1 hover:underline">Twitter</a>
-                    <a href="https://www.instagram.com" className="block mb-1 hover:underline">Instagram</a>
-                </div>
-                <div className="flex-1 min-w-[300px] m-2">
                     <h3 className="mb-2">Endereço</h3>
                     <p>Av. Paulista, 1106</p>
                     <p>Bela Vista, São Paulo</p>
