@@ -16,9 +16,13 @@ export default function CadastroUsuario(){
 
     }
 
+    const handleSubmit = async(evento:React.FormEvent<HTMLFormElement>) =>{
+
+    }
+
     return(
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h2>Por um mundo mais sustentável!</h2>
                 <h3>Faça seu cadastro</h3>
                 <div>
