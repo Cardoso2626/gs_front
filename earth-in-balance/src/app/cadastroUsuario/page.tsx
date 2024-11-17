@@ -50,15 +50,15 @@ export default function CadastroUsuario() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-[hsl(126,28%,35%)]">
+        <div className="flex items-center justify-center min-h-screen bg-[hsl(126,28%,35%)] px-4">
             <form
                 onSubmit={handleSubmit}
-                className="bg-black p-8 rounded-md shadow-md w-full max-w-md space-y-4"
+                className="bg-black p-8 rounded-md shadow-md w-full max-w-md space-y-6 md:space-y-8 sm:px-6"
             >
                 <h2 className="text-2xl font-semibold text-center text-white">
                     Por um mundo mais sustentável!
                 </h2>
-                <h3 className="text-lg font-medium text-center text-white">
+                <h3 className="text-lg font-medium text-center text-gray-300">
                     Faça seu cadastro!
                 </h3>
                 <div>
@@ -73,7 +73,7 @@ export default function CadastroUsuario() {
                         value={usuario.nome}
                         onChange={(evento) => handleChange(evento)}
                         required
-                        className="w-full p-2 mt-1 border rounded bg-white-800 text-white placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-900"
+                        className="w-full p-2 mt-1 border rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-500"
                     />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function CadastroUsuario() {
                         onChange={(evento) => handleChange(evento)}
                         required
                         min={0}
-                        className="w-full p-2 mt-1 border rounded bg-white-800 text-black placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-900"
+                        className="w-full p-2 mt-1 border rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-500"
                     />
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default function CadastroUsuario() {
                         value={usuario.telefone}
                         onChange={(evento) => handleChange(evento)}
                         required
-                        className="w-full p-2 mt-1 border rounded bg-white-800 text-black placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-900"
+                        className="w-full p-2 mt-1 border rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-500"
                     />
                 </div>
                 <div>
@@ -119,7 +119,7 @@ export default function CadastroUsuario() {
                         value={usuario.cpf}
                         onChange={(evento) => handleChange(evento)}
                         required
-                        className="w-full p-2 mt-1 border rounded bg-white-800 text-black placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-900"
+                        className="w-full p-2 mt-1 border rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring focus:ring-green-500"
                     />
                 </div>
                 <div>
