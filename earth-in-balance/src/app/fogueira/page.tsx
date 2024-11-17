@@ -3,7 +3,7 @@
 import { TipoHabito } from "@/types/types"
 import React, { useState } from "react"
 
-export default function fogueira(){
+export default function Fogueira(){
 
     const [habito, setHabito] = useState<TipoHabito>({
         descricao:"",
@@ -36,13 +36,40 @@ export default function fogueira(){
 
     }
 
+    const handleSubmit = async(evento:React.FormEvent<HTMLFormElement>) => {
+        evento.preventDefault();
+        try {
+            const response = await fetch("http://localhost:8080/usuarios",{
+                method: "POST",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(habito)
+            })
+
+            if(response.ok){
+                alert("Hábito colocado na fogueira")
+                setHabito({
+                    descricao:"",
+                    qtdDia:0,
+                    usuario:{
+                        id:0
+                    }
+                })
+            }
+        } catch (error) {
+            console.log("Erro ao colocar hábito na fogueira: ", error)
+            
+        }
+    }
+
 
 
     return(
         <div>
             <h2>BEM VINDO A FOGUEIRA</h2>
             <p>Aqui você pode nos falar um mau hábito que você quer deixar para trás e coloca-lo em nossa fogueira</p>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h2>Coloque aqui seus hábitos ruins que você quer colocar na fogueira</h2>
                 <div>
                     <label id="idDesc">Insira o seu mau hábito</label>
