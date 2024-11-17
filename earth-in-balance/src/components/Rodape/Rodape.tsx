@@ -6,7 +6,7 @@ export default function Rodape() {
   const currentYear = new Date().getFullYear(); 
 
   return (
-    <footer className="bg-black text-white py-5">
+    <footer className="bg-black text-white py-5 font-bold">
       <div className="flex flex-wrap justify-center mx-auto p-5">
         <div className="flex items-center space-x-4">
           <h3 className="mb-0">Earth in Balance © {currentYear}–{currentYear}</h3>
