@@ -1,7 +1,13 @@
+"use client"
+
 import { TipoUsuario } from "@/types/types";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react"
 
 export default function CadastroUsuario(){
+
+
+    const navigate = useRouter();
 
     const [usuario, setUsuario] = useState<TipoUsuario>({
         nome:"",
@@ -35,12 +41,13 @@ export default function CadastroUsuario(){
                     telefone:"",
                     cpf:""
                 })
-                
+                navigate.push("/")
             }
         } catch (error) {
+            console.error("Erro ao cadastrar o usuário", error)
             
         }
-    }
+    };
 
     return(
         <div>
