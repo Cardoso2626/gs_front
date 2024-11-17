@@ -8,7 +8,7 @@ export default function Time() {
   return (
     <main className="w-[90%] mx-auto my-5">
       <div className="text-center">
-        <h2 className="text-black font-bold text-3xl">INTEGRANTES</h2>
+        <h2 className="text-black font-bold text-3xl">Integrantes</h2>
 
         <div className="flex justify-center flex-wrap gap-8 mt-10 mb-10">
           <div className="bg-black text-white shadow-md p-5 rounded-lg w-full sm:w-[calc(33.333%-20px)] text-center flex flex-col items-center">
@@ -94,7 +94,7 @@ export default function Time() {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/marcos-vinicius-santos-louren%C3%A7o-45936526a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-300 text-2xl"
