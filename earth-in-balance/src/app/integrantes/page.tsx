@@ -27,7 +27,7 @@ export default function Time() {
                 href="https://github.com/Cardoso2626"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300 text-2xl"
+                className="text-green-900 hover:text-gray-300 text-2xl"
               >
                 <FaGithub />
               </a>
@@ -35,7 +35,7 @@ export default function Time() {
                 href="https://www.linkedin.com/in/pedro-saraiva-36b7702a8/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300 text-2xl"
+                className="text-green-900 hover:text-gray-300 text-2xl"
               >
                 <FaLinkedin />
               </a>
@@ -58,7 +58,7 @@ export default function Time() {
                 href="https://github.com/HeitorOrtega"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300 text-2xl"
+                className="text-green-900 hover:text-gray-300 text-2xl"
               >
                 <FaGithub />
               </a>
@@ -66,7 +66,7 @@ export default function Time() {
                 href="https://www.linkedin.com/in/heitor-ortega-silva-84b1aa2b6/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300 text-2xl"
+                className="text-green-900 hover:text-gray-300 text-2xl"
               >
                 <FaLinkedin />
               </a>
@@ -89,7 +89,7 @@ export default function Time() {
                 href="https://github.com/MarcosVini222"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300 text-2xl"
+                className="text-green-900 hover:text-gray-300 text-2xl"
               >
                 <FaGithub />
               </a>
@@ -97,7 +97,7 @@ export default function Time() {
                 href="https://www.linkedin.com/in/marcos-vinicius-santos-louren%C3%A7o-45936526a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300 text-2xl"
+                className="text-green-900 hover:text-gray-300 text-2xl"
               >
                 <FaLinkedin />
               </a>
@@ -110,7 +110,7 @@ export default function Time() {
             href="https://github.com/Cardoso2626/gs_front"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block py-3 px-6 bg-black text-white rounded-md text-lg transition duration-300 ease-in-out hover:bg-[#79f53f]"
+            className="inline-block py-3 px-6 bg-black text-white rounded-md text-lg transition duration-300 ease-in-out hover:bg-[hsl(126,28%,35%)]"
           >
             Repositório no GitHub
           </a>

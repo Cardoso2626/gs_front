@@ -9,7 +9,7 @@ export default function Cabecalho() {
       <div className="container mx-auto flex justify-between items-center px-4 py-2">
         <Link href="/" className="flex items-center">
           <Image src={Logo} alt="Ícone da empresa" width={60} height={60} />
-          <span className="ml-2 text-lg font-semibold text-black">Earth in Balance</span>
+          <span className="ml-2 text-lg font-semibold text-green-900">Earth in Balance</span>
         </Link>
         <Menu />
       </div>
