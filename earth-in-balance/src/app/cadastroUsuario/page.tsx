@@ -44,8 +44,7 @@ export default function CadastroUsuario(){
                 navigate.push("/")
             }
         } catch (error) {
-            console.error("Erro ao cadastrar o usuário", error)
-            
+            console.log("Erro ao cadastrar o usuário: ",error)
         }
     };
 
