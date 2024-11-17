@@ -1,8 +1,19 @@
+import { TipoUsuario } from "@/types/types";
+import { useState } from "react"
+
 export default function CadastroUsuario(){
+
+    const [usuario, setUsuario] = useState<TipoUsuario>({
+        nome:"",
+        idade:0,
+        telefone:"",
+        cpf:""
+    });
+
     return(
         <div>
             <form>
-                <h2>Por um mundo mais sustentável</h2>
+                <h2>Por um mundo mais sustentável!</h2>
                 <h3>Faça seu cadastro</h3>
                 <div>
                     <label id="idNome"></label>
@@ -10,7 +21,7 @@ export default function CadastroUsuario(){
                 </div>
                 <div>
                     <label id="idIdade"></label>
-                    <input type="number" name="idade" id="idIdade" placeholder="idade" required min={0}/>
+                    <input type="number" name="idade" id="idIdade" placeholder="Idade" required min={0}/>
                 </div>
                 <div>
                     <label id="idTelefone"></label>
