@@ -1,7 +1,7 @@
 "use client";
 
 import { TipoHabito } from "@/types/types"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 export default function Fogueira(){
 
@@ -12,6 +12,22 @@ export default function Fogueira(){
             id:0
         }
     });
+
+    const[habitos, setHabitos] = useState<TipoHabito[]>([])
+
+    const chamadaApi = async() =>{
+        try {
+            const response = await fetch("http://localhost:8080/habitos");
+            const data = await response.json();
+            setHabitos(data);
+        } catch (error) {
+            console.log("Falha na listagem: ", error);
+        }
+    }
+
+    useEffect(() =>{
+        chamadaApi();
+    }, []);
 
     const handleChange = (evento:React.ChangeEvent<HTMLInputElement>) => {
         const {name, value} = evento.target;
@@ -39,7 +55,7 @@ export default function Fogueira(){
     const handleSubmit = async(evento:React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault();
         try {
-            const response = await fetch("http://localhost:8080/usuarios",{
+            const response = await fetch("http://localhost:8080/habitos",{
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json"
