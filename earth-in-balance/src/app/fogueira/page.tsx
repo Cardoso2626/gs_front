@@ -80,8 +80,8 @@ export default function Fogueira() {
 
   return (
     <div className="text-center p-6">
-      <h2 className="text-3xl text-green-900 font-bold mb-4">BEM VINDO A FOGUEIRA</h2>
-      <p className="text-lg text-green-900 mb-6">
+      <h2 className="text-3xl text-black font-bold mb-4">BEM VINDO A FOGUEIRA</h2>
+      <p className="text-lg text-black mb-6">
         Aqui você pode nos contar os maus hábitos que quer deixar para trás e colocá-los na fogueira.
       </p>
 
@@ -89,12 +89,12 @@ export default function Fogueira() {
         onSubmit={handleSubmit}
         className="max-w-lg mx-auto p-6"
       >
-        <h3 className="text-2xl text-green-900 font-semibold mb-4">Coloque seu hábito ruim</h3>
+        <h3 className="text-2xl text-black font-semibold mb-4">Coloque seu hábito ruim</h3>
 
         <div className="mb-4">
           <label
             htmlFor="idDesc"
-            className="block text-lg text-green-900 font-medium mb-2"
+            className="block text-lg text-black font-medium mb-2"
           >
             Qual é o seu mau hábito?
           </label>
@@ -113,7 +113,7 @@ export default function Fogueira() {
         <div className="mb-4">
           <label
             htmlFor="idQtd"
-            className="block text-lg text-green-900 font-medium mb-2"
+            className="block text-lg text-black font-medium mb-2"
           >
             Quantos dias por semana você faz isso?
           </label>
@@ -132,7 +132,7 @@ export default function Fogueira() {
         <div className="mb-6">
           <label
             htmlFor="idUser"
-            className="block text-lg text-green-900 font-medium mb-2"
+            className="block text-lg text-black font-medium mb-2"
           >
             Qual é o seu ID de usuário?
           </label>
@@ -144,7 +144,7 @@ export default function Fogueira() {
             value={habito.usuario.id}
             onChange={handleChange}
             required
-            className="w-full p-3 border-2 border-green-800 rounded-md text-green-900"
+            className="w-full p-3 border-2 border-green-800 rounded-md text-black"
           />
         </div>
 
@@ -156,20 +156,20 @@ export default function Fogueira() {
         </button>
       </form>
 
-      <h3 className="text-2xl text-green-900 font-semibold my-6">Seus maus hábitos e de outras pessoas</h3>
+      <h3 className="text-2xl text-black font-semibold my-6">Seus maus hábitos</h3>
       <div className="overflow-x-auto">
         <table className="w-full border-collapse table-auto mx-auto">
           <thead>
             <tr className="text-center">
-              <th className="p-4 border-b text-lg text-green-900">Mau Hábito</th>
-              <th className="p-4 border-b text-lg text-green-900">Quantidade de dias por semana</th>
+              <th className="p-4 border-b text-lg text-black">Mau Hábito</th>
+              <th className="p-4 border-b text-lg text-black">Quantidade de dias por semana</th>
             </tr>
           </thead>
           <tbody className="text-center">
             {habitos.map((h, indice) => (
               <tr key={indice}>
-                <td className="p-4 border-b text-green-900">{h.descricao}</td>
-                <td className="p-4 border-b text-green-900">{h.qtdDia}</td>
+                <td className="p-4 border-b text-black">{h.descricao}</td>
+                <td className="p-4 border-b text-black">{h.qtdDia}</td>
               </tr>
             ))}
           </tbody>
