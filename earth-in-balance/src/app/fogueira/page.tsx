@@ -106,7 +106,7 @@ export default function Fogueira() {
             value={habito.descricao}
             onChange={handleChange}
             required
-            className="w-full p-3 border-2 border-green-800 rounded-md text-green-900"
+            className="w-full p-3 border-2 border-green-600 rounded-md text-green-900"
           />
         </div>
 
@@ -125,7 +125,7 @@ export default function Fogueira() {
             value={habito.qtdDia}
             onChange={handleChange}
             required
-            className="w-full p-3 border-2 border-green-800 rounded-md text-green-900"
+            className="w-full p-3 border-2 border-green-600 rounded-md text-green-900"
           />
         </div>
 
@@ -144,7 +144,7 @@ export default function Fogueira() {
             value={habito.usuario.id}
             onChange={handleChange}
             required
-            className="w-full p-3 border-2 border-green-800 rounded-md text-black"
+            className="w-full p-3 border-2 border-green-600 rounded-md text-black"
           />
         </div>
 
