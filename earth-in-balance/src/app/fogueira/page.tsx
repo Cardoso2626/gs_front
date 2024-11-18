@@ -2,6 +2,8 @@
 
 import { TipoHabito } from "@/types/types"
 import React, { useEffect, useState } from "react"
+import fogueira from "@/img/fogueira.png"
+import Image from "next/image";
 
 export default function Fogueira(){
 
@@ -125,11 +127,14 @@ export default function Fogueira(){
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colSpan={2}>Total de mau hábitos {habitos.length}</td>
+                            <td colSpan={2}>Total de maus hábitos {habitos.length}</td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
+
+            
+            <Image src={fogueira} alt="imagem da fogueira"/>
 
 
         </div>
