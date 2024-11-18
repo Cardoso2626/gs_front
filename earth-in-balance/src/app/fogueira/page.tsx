@@ -83,26 +83,55 @@ export default function Fogueira(){
 
     return(
         <div>
-            <h2>BEM VINDO A FOGUEIRA</h2>
-            <p>Aqui você pode nos falar um mau hábito que você quer deixar para trás e coloca-lo em nossa fogueira</p>
-            <form onSubmit={handleSubmit}>
-                <h2>Coloque aqui seus hábitos ruins que você quer colocar na fogueira</h2>
-                <div>
-                    <label id="idDesc">Insira o seu mau hábito</label>
-                    <input type="text" placeholder="Mau hábito" id="idDesc" name="descricao" value={habito.descricao} onChange={(evento) => handleChange(evento)} required/>
-                </div>
-                <div>
-                    <label id="idQtd">Insira a quantidade de dias na semana que você acha que isso ocorre</label>
-                    <input type="number" placeholder="Dias" id="idDesc" name="qtdDia" value={habito.qtdDia} onChange={(evento) => handleChange(evento)} required/>
-                </div>
-                <div>
-                    <label id="idUser">Insira o identificador do seu cadastro</label>
-                    <input type="text" placeholder="Id do usuário" id="idUser" name="id_usuario" value={habito.usuario.id} onChange={(evento) => handleChange(evento)} required/>
-                </div>
-                <div>
-                    <button type="submit">Colocar mau hábito na fogueira</button>
-                </div>
-            </form>
+            <div>
+                <h2>BEM VINDO A FOGUEIRA</h2>
+                <p>Aqui você pode nos falar um mau hábito que você quer deixar para trás e coloca-lo em nossa fogueira</p>
+                <form onSubmit={handleSubmit}>
+                    <h2>Coloque aqui seus hábitos ruins que você quer colocar na fogueira</h2>
+                    <div>
+                        <label id="idDesc">Insira o seu mau hábito</label>
+                        <input type="text" placeholder="Mau hábito" id="idDesc" name="descricao" value={habito.descricao} onChange={(evento) => handleChange(evento)} required/>
+                    </div>
+                    <div>
+                        <label id="idQtd">Insira a quantidade de dias na semana que você acha que isso ocorre</label>
+                        <input type="number" placeholder="Dias" id="idDesc" name="qtdDia" value={habito.qtdDia} onChange={(evento) => handleChange(evento)} required/>
+                    </div>
+                    <div>
+                        <label id="idUser">Insira o identificador do seu cadastro</label>
+                        <input type="text" placeholder="Id do usuário" id="idUser" name="id_usuario" value={habito.usuario.id} onChange={(evento) => handleChange(evento)} required/>
+                    </div>
+                    <div>
+                        <button type="submit">Colocar mau hábito na fogueira</button>
+                    </div>
+                </form>
+            </div>
+        
+            <h2>Seus maus hábitos e de outras pessoas</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mau habito</th>
+                            <th>Quantidade de dias por semana</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {habitos.map((h, indice) =>(
+                            <tr key={indice}>
+                                <td>{h.descricao}</td>
+                                <td>{h.qtdDia}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colSpan={2}>Total de mau hábitos {habitos.length}</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+
         </div>
     )
 }
