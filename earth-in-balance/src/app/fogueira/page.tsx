@@ -1,142 +1,200 @@
 "use client";
 
-import { TipoHabito } from "@/types/types"
-import React, { useEffect, useState } from "react"
-import fogueira from "@/img/fogueira.png"
+import { TipoHabito } from "@/types/types";
+import React, { useEffect, useState } from "react";
+import fogueira from "@/img/fogueira.png";
 import Image from "next/image";
 
-export default function Fogueira(){
+export default function Fogueira() {
+  const [habito, setHabito] = useState<TipoHabito>({
+    descricao: "",
+    qtdDia: 0,
+    usuario: {
+      id: 0,
+    },
+  });
 
-    const [habito, setHabito] = useState<TipoHabito>({
-        descricao:"",
-        qtdDia:0,
-        usuario:{
-            id:0
-        }
+  const [habitos, setHabitos] = useState<TipoHabito[]>([]);
+
+  const chamadaApi = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/habitos");
+      const data = await response.json();
+      setHabitos(data);
+    } catch (error) {
+      console.error("Falha na listagem: ", error);
+    }
+  };
+
+  useEffect(() => {
+    chamadaApi();
+  }, []);
+
+  const handleChange = (evento: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = evento.target;
+
+    setHabito((habito) => {
+      if (name === "id_usuario") {
+        return {
+          ...habito,
+          usuario: {
+            ...habito.usuario,
+            id: Number(value),
+          },
+        };
+      } else {
+        return {
+          ...habito,
+          [name]: value,
+        };
+      }
     });
+  };
 
-    const[habitos, setHabitos] = useState<TipoHabito[]>([])
+  const handleSubmit = async (evento: React.FormEvent<HTMLFormElement>) => {
+    evento.preventDefault();
+    try {
+      const response = await fetch("http://localhost:8080/habitos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(habito),
+      });
 
-    const chamadaApi = async() =>{
-        try {
-            const response = await fetch("http://localhost:8080/habitos");
-            const data = await response.json();
-            setHabitos(data);
-        } catch (error) {
-            console.error("Falha na listagem: ", error);
-        }
-    }
-
-    useEffect(() =>{
-        chamadaApi();
-    }, []);
-
-    const handleChange = (evento:React.ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = evento.target;
-
-        setHabito((habito) =>{
-            if(name === "id_usuario"){
-                return{
-                    ...habito,
-                    usuario:{
-                        ...habito.usuario,
-                        id: Number(value),
-                    },
-                };
-            
-            }else{
-                return{
-                    ...habito,
-                    [name]:value,
-                };
-            }
+      if (response.ok) {
+        alert("Hábito colocado na fogueira");
+        setHabito({
+          descricao: "",
+          qtdDia: 0,
+          usuario: {
+            id: 0,
+          },
         });
-
+        chamadaApi();
+      }
+    } catch (error) {
+      console.error("Erro ao colocar hábito na fogueira: ", error);
     }
+  };
 
-    const handleSubmit = async(evento:React.FormEvent<HTMLFormElement>) => {
-        evento.preventDefault();
-        try {
-            const response = await fetch("http://localhost:8080/habitos",{
-                method: "POST",
-                headers: {
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify(habito)
-            })
+  return (
+    <div className="text-center p-6">
+      <h2 className="text-3xl text-green-900 font-bold mb-4">BEM VINDO A FOGUEIRA</h2>
+      <p className="text-lg text-green-900 mb-6">
+        Aqui você pode nos contar os maus hábitos que quer deixar para trás e colocá-los na fogueira.
+      </p>
 
-            if(response.ok){
-                alert("Hábito colocado na fogueira")
-                setHabito({
-                    descricao:"",
-                    qtdDia:0,
-                    usuario:{
-                        id:0
-                    }
-                })
-            }
-        } catch (error) {
-            console.error("Erro ao colocar hábito na fogueira: ", error)
-            
-        }
-    }
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-lg mx-auto p-6"
+      >
+        <h3 className="text-2xl text-green-900 font-semibold mb-4">Coloque seu hábito ruim</h3>
 
-
-
-    return(
-        <div>
-            <div>
-                <h2>BEM VINDO A FOGUEIRA</h2>
-                <p>Aqui você pode nos falar um mau hábito que você quer deixar para trás e coloca-lo em nossa fogueira</p>
-                <form onSubmit={handleSubmit}>
-                    <h2>Coloque aqui seus hábitos ruins que você quer colocar na fogueira</h2>
-                    <div>
-                        <label id="idDesc">Insira o seu mau hábito</label>
-                        <input type="text" placeholder="Mau hábito" id="idDesc" name="descricao" value={habito.descricao} onChange={(evento) => handleChange(evento)} required/>
-                    </div>
-                    <div>
-                        <label id="idQtd">Insira a quantidade de dias na semana que você acha que isso ocorre</label>
-                        <input type="number" placeholder="Dias" id="idDesc" name="qtdDia" value={habito.qtdDia} onChange={(evento) => handleChange(evento)} required/>
-                    </div>
-                    <div>
-                        <label id="idUser">Insira o identificador do seu cadastro</label>
-                        <input type="number" placeholder="Id do usuário" id="idUser" name="id_usuario" value={habito.usuario.id} onChange={(evento) => handleChange(evento)} required/>
-                    </div>
-                    <div>
-                        <button type="submit">Colocar mau hábito na fogueira</button>
-                    </div>
-                </form>
-            </div>
-        
-            <h2>Seus maus hábitos e de outras pessoas</h2>
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Mau habito</th>
-                            <th>Quantidade de dias por semana</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {habitos.map((h, indice) =>(
-                            <tr key={indice}>
-                                <td>{h.descricao}</td>
-                                <td>{h.qtdDia}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colSpan={2}>Total de maus hábitos {habitos.length}</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-
-            
-            <Image src={fogueira} alt="imagem da fogueira"/>
-
-
+        <div className="mb-4">
+          <label
+            htmlFor="idDesc"
+            className="block text-lg text-green-900 font-medium mb-2"
+          >
+            Qual é o seu mau hábito?
+          </label>
+          <input
+            type="text"
+            placeholder="Exemplo: Fumar"
+            id="idDesc"
+            name="descricao"
+            value={habito.descricao}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border-2 border-green-800 rounded-md text-green-900"
+          />
         </div>
-    )
+
+        <div className="mb-4">
+          <label
+            htmlFor="idQtd"
+            className="block text-lg text-green-900 font-medium mb-2"
+          >
+            Quantos dias por semana você faz isso?
+          </label>
+          <input
+            type="number"
+            placeholder="Exemplo: 3"
+            id="idQtd"
+            name="qtdDia"
+            value={habito.qtdDia}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border-2 border-green-800 rounded-md text-green-900"
+          />
+        </div>
+
+        <div className="mb-6">
+          <label
+            htmlFor="idUser"
+            className="block text-lg text-green-900 font-medium mb-2"
+          >
+            Qual é o seu ID de usuário?
+          </label>
+          <input
+            type="number"
+            placeholder="Exemplo: 1"
+            id="idUser"
+            name="id_usuario"
+            value={habito.usuario.id}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border-2 border-green-800 rounded-md text-green-900"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full py-3 bg-green-500 text-white font-bold rounded-md hover:bg-green-900 transition"
+        >
+          Queimar esse mau hábito!
+        </button>
+      </form>
+
+      <h3 className="text-2xl text-green-900 font-semibold my-6">Seus maus hábitos e de outras pessoas</h3>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse table-auto mx-auto">
+          <thead>
+            <tr className="text-center">
+              <th className="p-4 border-b text-lg text-green-900">Mau Hábito</th>
+              <th className="p-4 border-b text-lg text-green-900">Quantidade de dias por semana</th>
+            </tr>
+          </thead>
+          <tbody className="text-center">
+            {habitos.map((h, indice) => (
+              <tr key={indice}>
+                <td className="p-4 border-b text-green-900">{h.descricao}</td>
+                <td className="p-4 border-b text-green-900">{h.qtdDia}</td>
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td
+                colSpan={2}
+                className="p-4 text-center font-semibold text-green-900"
+              >
+                Total de maus hábitos: {habitos.length}
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div className="mt-8 flex justify-center">
+        <Image
+          src={fogueira}
+          alt="Imagem da fogueira"
+          width={600}
+          height={600}
+          className="rounded-full"
+        />
+      </div>
+    </div>
+  );
 }
