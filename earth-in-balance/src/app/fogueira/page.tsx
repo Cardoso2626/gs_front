@@ -21,7 +21,7 @@ export default function Fogueira(){
             const data = await response.json();
             setHabitos(data);
         } catch (error) {
-            console.log("Falha na listagem: ", error);
+            console.error("Falha na listagem: ", error);
         }
     }
 
@@ -74,7 +74,7 @@ export default function Fogueira(){
                 })
             }
         } catch (error) {
-            console.log("Erro ao colocar hábito na fogueira: ", error)
+            console.error("Erro ao colocar hábito na fogueira: ", error)
             
         }
     }
@@ -98,7 +98,7 @@ export default function Fogueira(){
                     </div>
                     <div>
                         <label id="idUser">Insira o identificador do seu cadastro</label>
-                        <input type="text" placeholder="Id do usuário" id="idUser" name="id_usuario" value={habito.usuario.id} onChange={(evento) => handleChange(evento)} required/>
+                        <input type="number" placeholder="Id do usuário" id="idUser" name="id_usuario" value={habito.usuario.id} onChange={(evento) => handleChange(evento)} required/>
                     </div>
                     <div>
                         <button type="submit">Colocar mau hábito na fogueira</button>
