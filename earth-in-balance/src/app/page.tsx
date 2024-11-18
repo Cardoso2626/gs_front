@@ -7,7 +7,6 @@ import direita from "@/img/foto_direita.png";
 export default function Home() {
   return (
     <main className="font-sans leading-relaxed">
-      {/* Seção de Introdução */}
       <section className="bg-green-800 text-black py-12 px-6 sm:px-12">
         <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center">
           <div className="sm:w-1/2 text-center sm:text-left">
