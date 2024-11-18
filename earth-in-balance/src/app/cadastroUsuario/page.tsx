@@ -50,7 +50,7 @@ export default function CadastroUsuario() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-[hsl(126,28%,35%)] px-4">
+        <div className="flex items-center justify-center min-h-screen bg-[hsl(103,39%,59%)] px-4">
             <form
                 onSubmit={handleSubmit}
                 className="bg-black p-8 rounded-md shadow-md w-full max-w-md space-y-6 md:space-y-8 sm:px-6"
@@ -125,7 +125,7 @@ export default function CadastroUsuario() {
                 <div>
                     <button
                         type="submit"
-                        className="w-full px-4 py-2 text-black bg-[#e8ebe9] rounded hover:bg-[#0b3d13] focus:outline-none focus:ring focus:ring-green-500"
+                        className="w-full px-4 py-2 text-black bg-[#f2f3f2] rounded hover:bg-green-300 focus:outline-none focus:ring focus:ring-green-500"
                     >
                         Cadastre-se
                     </button>
@@ -134,7 +134,7 @@ export default function CadastroUsuario() {
                     <button
                         type="button"
                         onClick={handleContinueWithoutLogin}
-                        className="w-full px-4 py-2 text-white border border-gray-500 rounded hover:bg-green-700 focus:outline-none focus:ring focus:ring-green-500"
+                        className="w-full px-4 py-2 text-white border border-gray-500 rounded hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-500"
                     >
                         Continuar sem cadastro
                     </button>

@@ -5,27 +5,27 @@ export default function Menu() {
         <nav>
             <ul className="flex space-x-6 text-sm font-medium text-white">
                 <li>
-                    <Link href="/cadastroUsuario" className="font-bold hover:text-green-900 transition-colors">
+                    <Link href="/cadastroUsuario" className="font-bold hover:text-green-300 transition-colors">
                         Cadastro
                     </Link>
                 </li>
                 <li>
-                    <Link href="/gastos" className="font-bold hover:text-green-900 transition-colors">
+                    <Link href="/gastos" className="font-bold hover:text-green-300 transition-colors">
                         Controle
                     </Link>
                 </li>
                 <li>
-                    <Link href="/fogueira" className="font-bold hover:text-green-900 transition-colors">
+                    <Link href="/fogueira" className="font-bold hover:text-green-300 transition-colors">
                         Fogueira
                     </Link>
                 </li>
                 <li>
-                    <Link href="/planos" className="font-bold hover:text-green-900 transition-colors">
+                    <Link href="/planos" className="font-bold hover:text-green-300 transition-colors">
                         Planos
                     </Link>
                 </li>
                 <li>
-                    <Link href="/integrantes" className="font-bold hover:text-green-900 transition-colors">
+                    <Link href="/integrantes" className="font-bold hover:text-green-300 transition-colors">
                         Integrantes
                     </Link>
                 </li>
