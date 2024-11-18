@@ -4,8 +4,12 @@ import { TipoHabito } from "@/types/types";
 import React, { useEffect, useState } from "react";
 import fogueira from "@/img/fogueira.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Fogueira() {
+
+  const navigate = useRouter();
+
   const [habito, setHabito] = useState<TipoHabito>({
     descricao: "",
     qtdDia: 0,
@@ -71,7 +75,7 @@ export default function Fogueira() {
             id: 0,
           },
         });
-        chamadaApi();
+        navigate.push("/");
       }
     } catch (error) {
       console.error("Erro ao colocar hábito na fogueira: ", error);
