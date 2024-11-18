@@ -3,6 +3,7 @@ import energia from "@/img/img_home.png";
 import casa from "@/img/casinha da esquerda.png";
 import meio from "@/img/foto_meio.png";
 import direita from "@/img/foto_direita.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,8 +19,8 @@ export default function Home() {
               processos produtivos e reaproveitando energia, ou nos espaços comerciais e públicos, com sistemas inteligentes 
               e automatizados, o objetivo é o mesmo: fazer mais com menos.
             </p>
-            <button className="bg-black text-white py-3 px-6 rounded-lg text-lg hover:bg-orange-600 transition">
-              Busque a mudança!
+            <button className="bg-black text-white py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition">
+              <Link href="/fogueira">Busque a mudança!</Link>
             </button>
           </div>
           <div className="sm:w-1/2 mt-6 sm:mt-0">
