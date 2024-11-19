@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="font-sans leading-relaxed">
-      <section className="bg-green-800 text-black py-12 px-6 sm:px-12">
+      <section className="bg-[hsl(103,39%,59%)] text-black py-12 px-6 sm:px-12">
         <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center">
           <div className="sm:w-1/2 text-center sm:text-left">
             <h1 className="text-4xl font-bold mb-4">Por um mundo mais sustentável!</h1>
