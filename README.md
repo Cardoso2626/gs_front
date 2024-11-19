@@ -7,6 +7,8 @@
 
 ## 🔗 Acesse o projeto pelo Vercel:
 https://gs-front-delta.vercel.app/
+## ▶️ Vídeo do projeto:
+https://www.youtube.com/watch?v=EsLuIzuFfH8
 ## ⚙️ Instalação de dependências:
 Para instalar as dependências necessárias, execute o seguinte comando:
 
