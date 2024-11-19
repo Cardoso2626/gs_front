@@ -4,6 +4,11 @@ export default function Menu() {
     return (
         <nav>
             <ul className="flex space-x-6 text-sm font-medium text-white">
+                 <li>
+                    <Link href="/" className="font-bold hover:text-green-300 transition-colors">
+                        Home
+                    </Link>
+                </li>
                 <li>
                     <Link href="/cadastroUsuario" className="font-bold hover:text-green-300 transition-colors">
                         Cadastro
