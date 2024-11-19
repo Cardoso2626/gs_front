@@ -1,13 +1,19 @@
-🌐 Global Solution 2024 - Front End
-👥 Integrantes:
+# 🌐 Global Solution 2024 - Front End
 
-Heitor Ortega Silva - 557825
-Pedro Henrique Cardoso - 555160
-Marcos Vinicius Lourenço - 556496
-🔗 Vercel: 
+## 👥 Integrantes- 1TDSPW:
+- **Heitor Ortega Silva** - 557825
+- **Pedro Henrique Cardoso** - 555160
+- **Marcos Vinicius Lourenço** - 556496
 
-⚙️ Instalação de dependências:
+## 🔗 Acesse o projeto pelo Vercel:
+
+## ⚙️ Instalação de dependências:
+Para instalar as dependências necessárias, execute o seguinte comando:
+
 npm install react-icons
 
 
-✨ Pronto! Aproveite o projeto!
+📂 Repositório do Java:
+O repositório relacionado ao backend Java pode ser encontrado no seguinte link:
+
+https://github.com/Cardoso2626/gs_java
