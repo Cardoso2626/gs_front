@@ -2,16 +2,23 @@ import Logo from "@/img/logo.png";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Rodape() {
+export default function Footer() {
   const currentYear = new Date().getFullYear(); 
 
   return (
     <footer className="bg-black text-white py-5 font-bold">
       <div className="flex flex-wrap justify-center mx-auto p-5">
         <div className="flex items-center space-x-4">
-          <h3 className="mb-0">Earth in Balance © {currentYear}–{currentYear}</h3>
+          <h3 className="mb-0 text-xl">
+            Earth in Balance © {currentYear}–{currentYear}
+          </h3>
           <Link href="/" className="flex items-center">
-            <Image src={Logo} alt="Earth in Balance Logo" width={60} height={60} />
+            <Image 
+              src={Logo} 
+              alt="Earth in Balance Logo" 
+              width={60} 
+              height={60} 
+            />
           </Link>
         </div>
       </div>
