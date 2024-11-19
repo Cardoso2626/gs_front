@@ -11,7 +11,6 @@ export default function Time() {
         <h2 className="text-black font-bold text-3xl">Integrantes</h2>
 
         <div className="flex justify-center flex-wrap gap-8 mt-10 mb-10">
-          {/* Card Pedro */}
           <div className="bg-black text-white shadow-md p-5 rounded-lg w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] text-center flex flex-col items-center">
             <Image
               src={pedro}
@@ -42,8 +41,6 @@ export default function Time() {
               </a>
             </div>
           </div>
-
-          {/* Card Heitor */}
           <div className="bg-black text-white shadow-md p-5 rounded-lg w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] text-center flex flex-col items-center">
             <Image
               src={heitor}
@@ -74,8 +71,6 @@ export default function Time() {
               </a>
             </div>
           </div>
-
-          {/* Card Marcos */}
           <div className="bg-black text-white shadow-md p-5 rounded-lg w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] text-center flex flex-col items-center">
             <Image
               src={marcos}
@@ -107,8 +102,6 @@ export default function Time() {
             </div>
           </div>
         </div>
-
-        {/* Repositório */}
         <div className="text-center mt-5">
           <a
             href="https://github.com/Cardoso2626/gs_front"
