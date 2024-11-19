@@ -6,7 +6,7 @@
 - **Marcos Vinicius Lourenço** - 556496
 
 ## 🔗 Acesse o projeto pelo Vercel:
-
+https://gs-front-delta.vercel.app/
 ## ⚙️ Instalação de dependências:
 Para instalar as dependências necessárias, execute o seguinte comando:
 
