@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import pedro from "@/img/pedro.jpg";
 import marcos from "@/img/marcos.jpg";
-import heitor from "@/img/HeitorOrtega.png";
+import heitor from "@/img/heitor.jpeg";
 
 export default function Time() {
   return (
