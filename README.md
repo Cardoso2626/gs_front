@@ -6,7 +6,7 @@
 - **Marcos Vinicius Lourenço** - 556496
 
 ## 🔗 Acesse o projeto pelo Vercel:
-https://gs-front-delta.vercel.app/
+https://earth-in-balance.vercel.app/
 ## ▶️ Vídeo do projeto:
 https://www.youtube.com/watch?v=EsLuIzuFfH8
 ## ⚙️ Instalação de dependências:
