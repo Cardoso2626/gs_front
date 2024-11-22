@@ -21,7 +21,7 @@ O projeto "Earth in Balance" aborda soluções para melhorar a eficiência energ
 
 ## 🎨 Figma
 ### Para uma melhor compreensão do projeto, acesse nosso Figma no link abaixo:
-- Link : [Figma](https://www.figma.com/design/R4gDJUcaNwIiCoPTEvyU1L/Untitled?node-id=0-1&node-type=canvas&t=5IxKulmxpMZIf6t9-0)
+- Link : [Figma](https://www.figma.com/design/gCXdbcsymCIBYSIEX7byBx/Untitled?node-id=0-1&t=k20vjgzk1zSkG7ga-1 )
 - Email: earthinbalancefiap@gmail.com
 - Senha: GS123456!
 
