@@ -28,9 +28,11 @@ Siga os passos abaixo para configurar e utilizar o projeto:
 ### 3. Instalar Dependências 📦
 
 Para instalar as dependências do Front-End, execute os seguintes comandos no diretório do projeto:
-cd earth-in-balance
-npm i
-npm install react-icons
+cd earth-in-balance (primeiro comando)
+
+npm i (segundo comando)
+
+npm install react-icons (terceiro comando)
 
 ## 🔗 Acesse o Projeto pelo Vercel
 Você pode acessar o projeto publicado pelo Vercel através do link: [Vercel](https://earth-in-balance.vercel.app/)
