@@ -1,6 +1,24 @@
 <img src="https://github.com/Cardoso2626/gs_front/blob/main/earth-in-balance/src/img/logo.png?raw=true" alt="Logo do Projeto" width="50" style="float:left; margin-right: 10px; vertical-align: middle;" /> 
 
 # Projeto Earth in Balance
+O projeto "Earth in Balance" aborda soluções para melhorar a eficiência energética e reduzir desperdícios, destacando o uso de energias renováveis no dia a dia. Nosso objetivo é educar os usuários sobre alternativas mais eficientes e rentáveis, aumentando a consciência sobre o consumo energético.
+
+## O que o site oferece:
+
+- Conhecimento sobre energias renováveis, ajudando o usuário a entender seu impacto moral.
+
+- Controle de gastos energéticos, evitando desperdícios e promovendo eficiência.
+
+- Página interativa "Fogueira", onde o usuário registra hábitos que deseja abandonar, incentivando mudanças positivas.
+
+- Cadastro, onde o usuário pode navegar com cadastrou ou sem.
+
+- Planos, onde o usuário vai ter conhecimento dos nossos planos e entender cada um.
+  
+- Integrantes, onde o usuário vai conhecer a equipe que fez o site.
+
+- Nosso foco é mostrar que energia vai além do consumo: exige controle, entendimento e uso consciente, fatores essenciais para um futuro sustentável.
+
 
 ## 👥 Integrantes - 1TDSPW:
 
@@ -41,3 +59,9 @@ Você pode acessar o projeto publicado pelo Vercel através do link: [Vercel](ht
 ## ▶️ Vídeo do Projeto
 Veja um vídeo explicativo sobre o projeto no YouTube: [Assista ao vídeo](https://www.youtube.com/watch?v=EsLuIzuFfH8)
 🎥 Assista ao vídeo
+
+## 🎨 Figma
+### Login
+- Link : [Figma](https://www.figma.com/design/R4gDJUcaNwIiCoPTEvyU1L/Untitled?node-id=0-1&node-type=canvas&t=5IxKulmxpMZIf6t9-0)
+- Email: earthinbalancefiap@gmail.com
+- Senha: GS123456!
