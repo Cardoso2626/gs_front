@@ -19,6 +19,12 @@ O projeto "Earth in Balance" aborda soluções para melhorar a eficiência energ
 
 - Nosso foco é mostrar que energia vai além do consumo: exige controle, entendimento e uso consciente, fatores essenciais para um futuro sustentável.
 
+## 🎨 Figma
+### Para uma melhor compreensão do projeto, acesse nosso Figma no link abaixo:
+- Link : [Figma](https://www.figma.com/design/R4gDJUcaNwIiCoPTEvyU1L/Untitled?node-id=0-1&node-type=canvas&t=5IxKulmxpMZIf6t9-0)
+- Email: earthinbalancefiap@gmail.com
+- Senha: GS123456!
+
 
 ## 👥 Integrantes - 1TDSPW:
 
@@ -60,8 +66,3 @@ Você pode acessar o projeto publicado pelo Vercel através do link: [Vercel](ht
 Veja um vídeo explicativo sobre o projeto no YouTube: [Assista ao vídeo](https://www.youtube.com/watch?v=EsLuIzuFfH8)
 🎥 Assista ao vídeo
 
-## 🎨 Figma
-### Login
-- Link : [Figma](https://www.figma.com/design/R4gDJUcaNwIiCoPTEvyU1L/Untitled?node-id=0-1&node-type=canvas&t=5IxKulmxpMZIf6t9-0)
-- Email: earthinbalancefiap@gmail.com
-- Senha: GS123456!
