@@ -32,7 +32,7 @@ Para instalar as dependências do Front-End, execute o seguinte comando no diret
 npm install react-icons
 
 ## 🔗 Acesse o Projeto pelo Vercel
-Você pode acessar o projeto publicado pelo Vercel através do link: [https://earth-in-balance.vercel.app/](https://earth-in-balance.vercel.app/)
+Você pode acessar o projeto publicado pelo Vercel através do link: [Vercel](https://earth-in-balance.vercel.app/)
 🌍 Acesse o projeto no Vercel
 
 ## ▶️ Vídeo do Projeto
